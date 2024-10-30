@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 public class Main {
@@ -15,6 +16,7 @@ public class Main {
         boolean valueFound = false;
         int low = 0;
         int high = 100;
+
         for (int i = 0; i < dataPoints.length; i++)
         {
             dataPoints[i] = val;
@@ -63,7 +65,41 @@ public class Main {
         {
             System.out.println("That value was not found anywhere in the array index");
         }
+        int minValue = dataPoints[0];
+        int maxValue = dataPoints[0];
+        for (int i = 0; i < dataPoints.length; i++)
+        {
 
+            if (dataPoints[i] < minValue)
+            {
+                minValue = dataPoints[i];
+            }
+            else if (dataPoints[i] > maxValue)
+            {
+                maxValue = dataPoints[i];
+            }
 
+        }
+
+        System.out.println("the minimum value found in the index is " + minValue + " and the maximum value found in the index is " + maxValue);
+
+        System.out.println("The average of the data points is: " + getAverage(dataPoints));
     }
+
+
+    public static double getAverage(int values[])
+    {
+        double average = 0;
+        double sum = 0;
+        {
+            for (int i = 0; i < values.length; i++)
+            {
+                sum += values[i];
+                average = sum / values.length;
+
+            }
+        }
+        return average;
+    }
+
 }

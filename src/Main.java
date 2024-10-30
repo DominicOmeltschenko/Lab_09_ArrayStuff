@@ -83,7 +83,7 @@ public class Main {
 
         System.out.println("the minimum value found in the index is " + minValue + " and the maximum value found in the index is " + maxValue);
 
-        System.out.println("The average of the data points is: " + getAverage(dataPoints));
+        System.out.println("The average of dataPoints is: " + getAverage(dataPoints));
     }
 
 
